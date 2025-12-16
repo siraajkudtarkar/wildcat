@@ -13,34 +13,24 @@ Cross-platform Expo client with a local Express + Mongo server.
   - `JWT_SECRET` (set to a long random string)
   - `PORT` (default 4000)
   - `DEMO_TOKEN` (will be provided in submission)
-- Client (optional): set `EXPO_PUBLIC_API_BASE` to point to your server (e.g. `http://<your-ip>:4000`). If unset, the app auto-derives a host for simulator/device.
 
 ## Seed data and demo users
 - From `server/`, run `npm run seed` after installing deps to load demo data.
-- Demo logins: will be provided in submission
+- Logins: will be provided in submission
 
 ## Install and run
 1) Install client deps
 ```
-cd Wildcat
 npm install
 ```
-2) Install server deps
+2) Install server deps, seed data, and start server
 ```
 cd server
 npm install
-```
-3) Seed demo data (optional but recommended)
-```
-cd server
 npm run seed
-```
-4) Start server
-```
-cd server
 npm run dev
 ```
-5) Start Expo client
+4) In a new terminal, Start Expo client
 ```
 cd ..
 npm start
@@ -48,9 +38,9 @@ npm start
 Then open iOS/Android simulator or scan the QR code.
 
 ## Build/Deploy notes
-- Local dev uses the Express server; ensure `PORT` matches client `EXPO_PUBLIC_API_BASE` if you override it.
+- Local dev uses the Express server.
 - No third-party API keys are required for the current demo build.
-- If deploying the server, set the same env vars as in `.env.example` and update `EXPO_PUBLIC_API_BASE` to the deployed URL for clients.
+- If deployment link does not work, try using locally with environment variables provided (switch out MONGO_URI for default URI `mongodb://127.0.0.1:27017/wildcat_dev`).
 
 ## Key commands
 - `npm start` (client via Expo)
