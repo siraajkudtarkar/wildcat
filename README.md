@@ -1,6 +1,11 @@
-# Wildcat Fantasy
+# Wildcat Fantasy Football
 
-Cross-platform Expo client with a local Express + Mongo server.
+Wildcat is a bite-sized fantasy football mobile app where you draft a handful of stars, lock lineups fast, make simple over/under bets on your picks, and watch head-to-head results swing in real time.
+
+## Stack
+- React Native & Expo
+- Express Middleware
+- MongoDB NoSQL Backend
 
 ## Prerequisites
 - Node.js 18+ and npm
