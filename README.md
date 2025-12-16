@@ -50,4 +50,4 @@ Then open iOS/Android simulator or scan the QR code.
 ## Key commands
 - `npm start` (client via Expo)
 - `npm run dev` (server, from `server/`)
-- `node ./seed.js` (server, from `server/`)
+- `npm run seed` (server, from `server/`)
