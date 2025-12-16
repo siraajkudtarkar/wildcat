@@ -27,11 +27,16 @@ io.on('connection', (socket) => {
   });
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 
-connectDB(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/wildcat_dev')
-  .then(() => console.log('DB connected'))
-  .catch(err => console.error('DB connection error', err));
+// connectDB(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/wildcat_dev')
+//   .then(() => console.log('DB connected'))
+//   .catch(err => console.error('DB connection error', err));
+
+const db = process.env.MONGO_URI;
+connectDB(db)
+  .then(() => console.log('Cloud DB connected'))
+  .catch(err => console.error('Cloud DB connection error', err));
 
 app.use('/auth', authRoutes);
 app.use('/players', playersRoutes);
