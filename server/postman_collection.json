@@ -1,0 +1,61 @@
+{
+  "info": {
+    "name": "Wildcat API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Sample requests for Wildcat backend. Set collection variable base_url (e.g. http://localhost:4000) and bearer_token after login."
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {"raw": "{{base_url}}/", "host": ["{{base_url}}"], "path": [""]}
+      }
+    },
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [ {"key": "Content-Type", "value": "application/json"} ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"demo@wildcat.test\",\n  \"password\": \"demo123\",\n  \"displayName\": \"Demo User\"\n}"
+        },
+        "url": {"raw": "{{base_url}}/auth/signup", "host": ["{{base_url}}"], "path": ["auth", "signup"]}
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [ {"key": "Content-Type", "value": "application/json"} ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"demo@wildcat.test\",\n  \"password\": \"demo123\"\n}"
+        },
+        "url": {"raw": "{{base_url}}/auth/login", "host": ["{{base_url}}"], "path": ["auth", "login"]}
+      }
+    },
+    {
+      "name": "Public League",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {"raw": "{{base_url}}/leagues/public", "host": ["{{base_url}}"], "path": ["leagues", "public"]}
+      }
+    },
+    {
+      "name": "Demo Matchup Week 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {"raw": "{{base_url}}/matchups/demo/week/1", "host": ["{{base_url}}"], "path": ["matchups", "demo", "week", "1"]}
+      }
+    }
+  ],
+  "variable": [
+    {"key": "base_url", "value": "http://localhost:4000"},
+    {"key": "bearer_token", "value": "FantasyWinner"}
+  ]
+}
